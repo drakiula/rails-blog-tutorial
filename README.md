@@ -22,3 +22,8 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+RAILS ENV after installation:
+
+[GEM_HOME Howto](https://github.com/rbenv/rbenv/issues/1267#issuecomment-730126503)
