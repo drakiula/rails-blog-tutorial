@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root "articles#index"
 
+  put "/articles/:article_id/comments/:id/archive" => "comments#archive", as: :article_comment_archive
+
   resources :articles do
     resources :comments
   end
