@@ -12,6 +12,15 @@ class CommentsController < ApplicationController
     redirect_to article_path(@article), status: :see_other
   end
 
+  def edit
+    @article = Article.find(params[:article_id])
+    @comment = @article.comments.find(params[:id])
+    @comment.status = 'archived'
+    @comment.save
+    redirect_to article_path(@article), status: :see_other
+  end
+
+ 
   private
     def comment_params
       params.require(:comment).permit(:commenter, :body, :status) 

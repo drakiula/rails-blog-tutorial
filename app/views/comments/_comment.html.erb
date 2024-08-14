@@ -13,6 +13,10 @@
     <%= link_to "Destroy Comment", [comment.article, comment], data: {
                   turbo_method: :delete,
                   turbo_confirm: "Are you sure?"
+    } %>&nbsp;
+    <%= link_to "Archive", edit_article_comment_path(comment.article, comment), data: {
+                  #turbo_method: :put,
+                  turbo_confirm: "Are you sure?"
     } %>
   </p>
 <% end %>
